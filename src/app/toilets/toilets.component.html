@@ -1,0 +1,19 @@
+
+<mat-toolbar color="primary">
+    
+    Public toilets  
+    <span style="width: 100%"> </span>
+    
+    <mat-slide-toggle [formControl]="toggleFormControl">No fees</mat-slide-toggle>
+    
+    
+  </mat-toolbar>
+  <mat-sidenav-container>    
+    <mat-sidenav opened mode="side" position="end" fixedInViewport fixedTopGap="75" style="width: 40%;">
+      <app-toilets-list  [toilets]="toilets | async" [noFees]="noFeesFilter | async" [position]="position | async"></app-toilets-list>
+        
+    </mat-sidenav>
+    <mat-sidenav-content >
+      <app-map></app-map>    
+    </mat-sidenav-content>
+  </mat-sidenav-container>

@@ -1,0 +1,8 @@
+{
+  "name": "Public Toilets",
+  "short_name": "PubToilets",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "fullscreen",
+  "orientation": "landscape"
+}

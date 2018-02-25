@@ -1,0 +1,13 @@
+<mat-list>
+    <mat-list-item *ngFor="let toilet of getFilteredToilets()">
+      
+      <img src="assets/toilet.png" matListIcon/>
+      <h3 matLine> {{toilet.display_name}} </h3>
+      <p matLine style="font-weight: bold;" *ngIf="toilet.distance">{{toilet.distance | number: '0.0-2'}}m</p>
+      <p matLine>
+        <span> {{toilet.extratags.opening_hours}}</span>
+       
+      </p>
+      <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+    </mat-list-item>
+  </mat-list>
